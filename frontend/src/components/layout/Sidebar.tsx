@@ -9,6 +9,7 @@ import {
     Settings,
     ChevronLeft,
     ChevronRight,
+    Zap,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -22,6 +23,7 @@ const navItems = [
     { icon: Map, label: 'Map', path: '/map' },
     { icon: Network, label: 'Nodes', path: '/nodes' },
     { icon: Cable, label: 'Cables', path: '/cables' },
+    { icon: Zap, label: 'Splicing', path: '/splicing' },
     { icon: Users, label: 'Customers', path: '/customers' },
     { icon: Settings, label: 'Settings', path: '/settings' },
 ];

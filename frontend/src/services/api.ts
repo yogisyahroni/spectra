@@ -141,6 +141,11 @@ class ApiClient {
         await this.client.delete(`/api/connections/${id}`);
     }
 
+    async getConnectionsByLocation(nodeId: number): Promise<Connection[]> {
+        const response = await this.client.get<ApiResponse<Connection[]>>(`/api/connections/location/${nodeId}`);
+        return response.data.data || [];
+    }
+
     // ==================== CUSTOMERS ====================
     async getCustomers(params?: {
         node_id?: number;

@@ -87,11 +87,11 @@ export interface CableCore {
 export interface Connection {
     id: number;
     location_node_id?: number;
-    input_type: ConnectionType;
-    input_id: number;
-    output_type: ConnectionType;
-    output_id: number;
-    loss_db?: number;
+    input_cable_id: number;
+    input_core_id: number;
+    output_cable_id: number;
+    output_core_id: number;
+    splice_loss?: number;
     notes?: string;
     created_at: string;
     updated_at: string;
@@ -99,11 +99,11 @@ export interface Connection {
 
 export interface CreateConnectionRequest {
     location_node_id?: number;
-    input_type: ConnectionType;
-    input_id: number;
-    output_type: ConnectionType;
-    output_id: number;
-    loss_db?: number;
+    input_cable_id: number;
+    input_core_id: number;
+    output_cable_id: number;
+    output_core_id: number;
+    splice_loss?: number;
     notes?: string;
 }
 
